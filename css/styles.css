@@ -136,14 +136,37 @@ body {
     color: var(--berge);
 }
 
+
+/* RODAPÉ */
 .rodape {
     padding: 32px;
     border-top: 0.4px solid var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
 }
 
 .rodape-imagem {
     height: 48px;
-    display: block;
-    margin: 0 auto;
 }
 
+.rodape-redes-sociais {
+    display: flex;
+    gap: 16px;
+}
+
+.rodape-redes-sociais-icons {
+    color: var(--berge);
+    font-size: 26px;
+    padding: 4px;
+    cursor: pointer;
+    position: relative;
+
+    transition: all 0.2s;
+}
+
+.rodape-redes-sociais-icons:hover {
+    filter: brightness(1.1);
+    bottom: 2px;
+}
