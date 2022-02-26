@@ -6,6 +6,7 @@
     --white: #fff2e7;
     --berge: #ecd6c4;
     --dark-brown: #2F2325;
+    --yellow: #F5E053;
 
     --font-sarala: 'Sarala', sans-serif;
     --font-righteous: 'Righteous', cursive;
@@ -68,6 +69,24 @@ body {
     font-size: 1.125rem;
     text-decoration: none;
     padding: 0.25rem;
+    
+    position: relative;
+}
+
+.cabecalho-menu-item:before {
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--yellow);
+
+    transition: all 1.5s ease;
+}
+
+.cabecalho-menu-item:hover:before {
+    width: 100%;
 }
 
 
