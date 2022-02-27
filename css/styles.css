@@ -278,6 +278,10 @@ body {
         text-align: center;
     }
 
+    .conteudo-principal-imagem {
+        width: 23rem;
+    }
+
     .conteudo-principal-botao {
         width: 90%;
     }
