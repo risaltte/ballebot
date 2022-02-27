@@ -6,6 +6,7 @@
     --white: #fff2e7;
     --berge: #ecd6c4;
     --dark-brown: #2F2325;
+    --dark-brown-transparent: rgba(47, 35, 37, 0.98);
     --yellow: #F5E053;
 
     --font-sarala: 'Sarala', sans-serif;
@@ -49,9 +50,22 @@ body {
     align-items: center;
     justify-content: space-between;
 
+    height: 7.5rem;
     padding: 1.5rem 0;
     max-width: 980px;
     margin: 0 auto;
+}
+
+.cabecalho-botao-menu-mobile .line {
+    width: 2rem;
+    height: 2px;
+    background-color: var(--berge);
+    margin: 0.5rem;
+}
+
+.cabecalho-botao-menu-mobile {
+    display: none;
+    cursor: pointer;
 }
 
 .cabecalho-imagem {
@@ -211,4 +225,60 @@ body {
 .rodape-redes-sociais-icons:hover {
     filter: brightness(1.1);
     bottom: 2px;
+}
+
+
+
+
+/* MOBILE */
+@media (max-width: 576px) {
+    .cabecalho-botao-menu-mobile {
+        display: block;
+    }
+
+    .cabecalho {
+        height: 5.5rem;
+        padding: 0 0.25rem;
+    }
+
+    .cabecalho-menu {
+        position: absolute;
+        top: calc(5.5rem + 0.7px);
+        left: -60%;
+        width: 60%;
+        height: 0;
+        overflow: hidden;
+
+        background: var(--dark-brown-transparent);
+        padding-top: 2rem;
+        padding-left: 1rem;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        transition: all 0.5s ease-in;
+    }
+
+    .menu-mobile-ativo {
+        left: 0;
+        height: calc(100% - 5.5rem - 0.7px)
+    }
+
+    .conteudo {
+        padding: 0 0.25rem;
+    }
+
+    .conteudo-principal {
+        flex-direction: column;
+        margin-top: 3rem;
+    }
+
+    .conteudo-principal-escrito {
+        align-items: center;
+        text-align: center;
+    }
+
+    .conteudo-principal-botao {
+        width: 90%;
+    }
 }
